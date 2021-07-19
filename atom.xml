@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Neko Nest</title>
+  
+  
+  <link href="https://eveneko.com/atom.xml" rel="self"/>
+  
+  <link href="https://eveneko.com/"/>
+  <updated>2021-07-19T01:57:17.934Z</updated>
+  <id>https://eveneko.com/</id>
+  
+  <author>
+    <name>Eveneko</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Blockchain Seminar (Bug Injection on Smart Contract)</title>
+    <link href="https://eveneko.com/2021/07/17/blockchain-seminar-20210717/"/>
+    <id>https://eveneko.com/2021/07/17/blockchain-seminar-20210717/</id>
+    <published>2021-07-17T20:00:00.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<p>Speaker: Zhou Yu(俞州)</p><h1 id="Paper-1-How-Effective-are-Smart-Contract-Analysis-Tools-Evaluating-Smart-Contract-Static-Analysis-Tools-Using-Bug-Injection"><a href="#Paper-1-How-Effective-are-Smart-Contract-Analysis-Tools-Evaluating-Smart-Contract-Static-Analysis-Tools-Using-Bug-Injection" class="headerlink" title="Paper 1(How Effective are Smart Contract Analysis Tools? Evaluating Smart Contract Static Analysis Tools Using Bug Injection)"></a>Paper 1(<a class="link"   href="https://arxiv.org/abs/2005.11613" >How Effective are Smart Contract Analysis Tools? Evaluating Smart Contract Static Analysis Tools Using Bug Injection<i class="fas fa-external-link-alt"></i></a>)</h1><h2 id="Static-Analysis-Tools"><a href="#Static-Analysis-Tools" class="headerlink" title="Static Analysis Tools"></a>Static Analysis Tools</h2><ul><li>Symbolic Execution<ul><li>Oyente</li><li>Securify</li><li>Mythril</li><li>Manticore</li></ul></li><li>Pattern matching<ul><li>SmartCheck</li></ul></li><li>Static Single Assignment<ul><li>Slither</li></ul></li></ul><h2 id="Bug-Injection"><a href="#Bug-Injection" class="headerlink" title="Bug Injection"></a>Bug Injection</h2><h3 id="Challenging"><a href="#Challenging" class="headerlink" title="Challenging"></a>Challenging</h3><ul><li>找个合适的插入位置<ul><li>编译不通过</li></ul></li><li>语义依赖<ul><li>时间戳(block.timestamp())（可以被矿工恶意利用）</li></ul></li></ul><h3 id="Smart-Contract"><a href="#Smart-Contract" class="headerlink" title="Smart Contract"></a>Smart Contract</h3><ul><li>数量 50</li><li>类型</li><li>代码长度</li><li>插入方式<ul><li>插入完整代码(Inject full code snippets)</li><li>弱化安全机制(Weakening security mechanisms)</li><li>修改代码(Transform codes)</li></ul></li></ul><h3 id="Bug-Type"><a href="#Bug-Type" class="headerlink" title="Bug Type"></a>Bug Type</h3><ul><li>Reentrancy<ul><li>一个函数在同时多次调用</li></ul></li><li>Timestamp dependency<ul><li>依赖时间戳，被 矿工恶意利用</li></ul></li><li>Unhandled Send</li><li>Unhandled exceptions<ul><li>异常终止合约</li></ul></li><li>Transaction ordering dependency(TOC)<ul><li>打包区块，对用户交易顺序改变</li></ul></li><li>Integer overflow/underflow</li><li>Use of tx.origin<ul><li>合约相互调用时</li><li>tx.origin: 最初调用者</li><li>msg sender: 上一个调用者</li></ul></li></ul><h2 id="Solidify-Algorithm"><a href="#Solidify-Algorithm" class="headerlink" title="Solidify Algorithm"></a>Solidify Algorithm</h2><ol><li>确认可以编译通过，生成抽象语法树，找所有可插入位置</li></ol><ul><li>插入完整代码(Inject full code snippets)<ul><li>一行代码</li><li>代码块（位置与function有关）</li></ul></li><li>弱化安全机制(Weakening security mechanisms)<ul><li>tx.origin</li><li>Integer overflow/underflow</li><li>delete checking</li></ul></li><li>修改代码(Transform codes)</li></ul><ol start="2"><li>插入漏洞</li><li>在静态分析工具上分析</li></ol><ul><li>正确性（类型，位置）</li><li>设定不同阈值，用来判断误报</li></ul><h2 id="Exploitability"><a href="#Exploitability" class="headerlink" title="Exploitability"></a>Exploitability</h2><ul><li>TOD测试代价较大，没有测试</li></ul><h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ul><li>插入的漏洞和源代码没有关系</li></ul><h1 id="Paper-2-LAVA-Large-scale-Automated-Vulnerability-Addition"><a href="#Paper-2-LAVA-Large-scale-Automated-Vulnerability-Addition" class="headerlink" title="Paper 2(LAVA: Large-scale Automated Vulnerability Addition)"></a>Paper 2(<a class="link"   href="https://ieeexplore.ieee.org/abstract/document/7546498" >LAVA: Large-scale Automated Vulnerability Addition<i class="fas fa-external-link-alt"></i></a>)</h1><p>自动收集漏洞</p><h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://raw.githubusercontent.com/Eveneko/Source-Hosting/master/PicX/image.5qgkkhydsvg0.png"                      alt="image"                ></p><ul><li>Accident</li><li>Search</li><li>Injection</li><li>Synthesis</li></ul><h2 id="Taint-based-measures"><a href="#Taint-based-measures" class="headerlink" title="Taint-based measures"></a>Taint-based measures</h2><ul><li>被利用的数据，DUA（Dead, Uncomplicated And Available data）</li><li>TCN<ul><li>数字越大，变量被计算次数越多</li><li>0代表直接从输入来，我们认为更容易被控制</li></ul></li><li>liveness<ul><li>评估输入数据</li><li>输入被用在分支</li><li>决定分支越多，对程序控制流越大，越好被利用</li></ul></li></ul><h2 id="Attack-point-selection"><a href="#Attack-point-selection" class="headerlink" title="Attack point selection"></a>Attack point selection</h2><ul><li>在DUA出现之后，可以利用DUA，就是一个可以利用对位置</li></ul><h2 id="Data-flow-bug-injection"><a href="#Data-flow-bug-injection" class="headerlink" title="Data-flow bug injection"></a>Data-flow bug injection</h2><ul><li>在DUA和attack point之间建立Data-flow</li></ul><h2 id="Finding-DUA"><a href="#Finding-DUA" class="headerlink" title="Finding DUA"></a>Finding DUA</h2><ul><li>LAVA 大概的流程</li></ul><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://raw.githubusercontent.com/Eveneko/Source-Hosting/master/PicX/image.mff5f669nao.png"                      alt="image"                ></p><h1 id="实验室工作"><a href="#实验室工作" class="headerlink" title="实验室工作"></a>实验室工作</h1><ul><li>Vulnerability Detection Platform</li><li>因为缺少数据，所以想自己插入漏洞</li><li>bytecode，source code 两种数据的不同</li><li>跨平台</li></ul><h1 id="PDF"><a href="#PDF" class="headerlink" title="PDF"></a>PDF</h1><div class="row">    <embed src="/pdf/bug_injection.pdf" width="100%" height="550" type="application/pdf"></div><link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Speaker: Zhou Yu(俞州)&lt;/p&gt;
+&lt;h1 id=&quot;Paper-1-How-Effective-are-Smart-Contract-Analysis-Tools-Evaluating-Smart-Contract-Static-Analysis-Tools-</summary>
+      
+    
+    
+    
+    
+    <category term="Blockchain" scheme="https://eveneko.com/tags/Blockchain/"/>
+    
+    <category term="Seminar" scheme="https://eveneko.com/tags/Seminar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Judge whether android app can run on x86 platform</title>
+    <link href="https://eveneko.com/2021/07/16/android-x86/"/>
+    <id>https://eveneko.com/2021/07/16/android-x86/</id>
+    <published>2021-07-16T10:22:40.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>判定一个 Android app 是不是能在x86下运行</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p><a class="link"   href="https://gitlab.softsec.work/huyubin/android-x86-judger" >android-x86-judger<i class="fas fa-external-link-alt"></i></a></p><p>简单判断一下 <code>apk</code> 里面没有 <code>arm</code> 的 <code>.so</code> 库应当就能在x86下运行.</p><div class='spoiler collapsed'>    <div class='spoiler-title'>        Code    </div>    <div class='spoiler-content'>        <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level=logging.DEBUG, <span class="built_in">format</span>=<span class="string">&#x27;%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s&#x27;</span>)</span><br><span class="line">logger = logging.getLogger()</span><br><span class="line"></span><br><span class="line">APK_FLODER = <span class="string">&#x27;apk/&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_apk_namelist</span>(<span class="params">apk_path</span>):</span></span><br><span class="line">    unzip_file = zipfile.ZipFile(apk_path, <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> unzip_file.namelist()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">apk_folder</span>):</span></span><br><span class="line">    <span class="keyword">for</span> apk_name <span class="keyword">in</span> os.listdir(apk_folder):</span><br><span class="line">        apk_path = os.path.join(apk_folder, apk_name)</span><br><span class="line">        unzip_file_list = get_apk_namelist(apk_path)</span><br><span class="line">        suspects_list = []</span><br><span class="line">        <span class="keyword">for</span> filename <span class="keyword">in</span> unzip_file_list:</span><br><span class="line">            <span class="keyword">if</span> re.match(<span class="string">&#x27;lib(s?)/arm(.*)/(.*).so&#x27;</span>, filename) != <span class="literal">None</span>:</span><br><span class="line">                suspects_list.append(filename)</span><br><span class="line">        logger.debug(suspects_list)</span><br><span class="line">        <span class="keyword">if</span>(suspects_list == []):</span><br><span class="line">            logger.info(msg)(<span class="string">f&#x27;[<span class="subst">&#123;apk_name&#125;</span>] can run on x86 platform!&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            logger.info(<span class="string">f&#x27;[<span class="subst">&#123;apk_name&#125;</span>] can not run on x86 platform!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    parser = argparse.ArgumentParser(description=<span class="string">&#x27;Judge whether android app can run on x86 platform&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;-d&#x27;</span>, <span class="string">&#x27;--dir&#x27;</span>, default=APK_FLODER, <span class="built_in">help</span>=<span class="string">&#x27;apk floder path&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;-q&#x27;</span>, <span class="string">&#x27;--quiet&#x27;</span>, action=<span class="string">&quot;store_true&quot;</span>, <span class="built_in">help</span>=<span class="string">&#x27;ingore debug message&#x27;</span>)</span><br><span class="line">    args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> args.quiet:</span><br><span class="line">        logger.setLevel(logging.INFO)</span><br><span class="line">    </span><br><span class="line">    run(args.<span class="built_in">dir</span>)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>    </div></div><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul><li><a class="link"   href="https://www.android-x86.org/" >android-x86<i class="fas fa-external-link-alt"></i></a></li></ul><link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h1&gt;&lt;p&gt;判定一个 Android app 是不是能在x86下运行&lt;/p&gt;
+&lt;h1 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="Android" scheme="https://eveneko.com/tags/Android/"/>
+    
+    <category term="Softsec" scheme="https://eveneko.com/tags/Softsec/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ - STL合集</title>
+    <link href="https://eveneko.com/2021/07/16/cpp-stl/"/>
+    <id>https://eveneko.com/2021/07/16/cpp-stl/</id>
+    <published>2021-07-16T10:15:27.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h1><p>C++ STL 标准模板库）是一套功能强大的 C++ 模板类，提供了通用的模板类和函数，这些模板类和函数可以实现多种流行和常用的算法和数据结构。</p><p>虽然有些不是很快，但是平常使用起来比较简洁，底层算法也值得细看。</p><p>本着遇到一个记一个的态度，长期慢更。</p><h1 id="STL的六大组件"><a href="#STL的六大组件" class="headerlink" title="STL的六大组件"></a>STL的六大组件</h1><ul><li>容器（Container）<blockquote><p>是一种数据结构，如list，vector，和deques ，以模板类的方法提供。为了访问容器中的数据，可以使用由容器类输出的迭代器；</p></blockquote></li><li>迭代器（Iterator）<blockquote><p>提供了访问容器中对象的方法。例如，可以使用一对迭代器指定list或vector中的一定范围的对象。迭代器就如同一个指针。事实上，C++的指针也是一种迭代器。但是，迭代器也可以是那些定义了operator*()以及其他类似于指针的操作符地方法的类对象；</p></blockquote></li><li>算法（Algorithm）<blockquote><p>是用来操作容器中的数据的模板函数。例如，STL用sort()来对一个vector中的数据进行排序，用find()来搜索一个list中的对象，函数本身与他们操作的数据的结构和类型无关，因此他们可以在从简单数组到高度复杂容器的任何数据结构上使用；</p></blockquote></li><li>仿函数（Function object）<blockquote><p>仿函数(functor)又称之为函数对象（function object），其实就是重载了()操作符的struct，没有什么特别的地方</p></blockquote></li><li>迭代适配器（Adaptor）</li><li>空间配制器（allocator）<blockquote><p>其中主要工作包括两部分1.对象的创建与销毁    2.内存的获取与释放</p></blockquote></li></ul><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="partition"><a href="#partition" class="headerlink" title="partition"></a><code>partition</code></h3><h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><p>为对指定范围内元素重新排序，使用输入的函数，把结果为true的元素放在结果为false的元素之前</p><h4 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">ForwardIterator <span class="title">partition</span> <span class="params">(ForwardIterator first,</span></span></span><br><span class="line"><span class="params"><span class="function">                           ForwardIterator last,</span></span></span><br><span class="line"><span class="params"><span class="function">                           UnaryPredicate pred)</span></span>;</span><br></pre></td></tr></table></figure><h4 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h4><ul><li><code>first</code> 和 <code>last</code> 为正向迭代器，其组合 <code>[first, last)</code> 用于指定该函数的作用范围。</li><li><code>pred</code> 用于指定筛选规则。</li></ul><h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">bool</span> <span class="title">isOdd</span><span class="params">( <span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> i&amp;<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">exchange</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">partition</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>(), isOdd);</span><br><span class="line">        <span class="keyword">return</span> nums;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h3 id="stable-partition"><a href="#stable-partition" class="headerlink" title="stable_partition"></a><code>stable_partition</code></h3><h4 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a>作用</h4><p>在 <code>partition</code> 基础上，保证对指定区域内数据完成分组的同时，不改变各组内元素的相对位置。</p><h4 id="函数原型-1"><a href="#函数原型-1" class="headerlink" title="函数原型"></a>函数原型</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">BidirectionalIterator <span class="title">stable_partition</span> <span class="params">(BidirectionalIterator first,</span></span></span><br><span class="line"><span class="params"><span class="function">                                        BidirectionalIterator last,</span></span></span><br><span class="line"><span class="params"><span class="function">                                        UnaryPredicate pred)</span></span>;</span><br></pre></td></tr></table></figure><h4 id="解释-1"><a href="#解释-1" class="headerlink" title="解释"></a>解释</h4><p>和 <code>partition</code> 相比，使用了双向迭代器，保证排列后顺序。</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul><li><a class="link"   href="https://www.cnblogs.com/ld1226/p/5412515.html" >C++ STL 一般总结<i class="fas fa-external-link-alt"></i></a></li></ul><link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Preview&quot;&gt;&lt;a href=&quot;#Preview&quot; class=&quot;headerlink&quot; title=&quot;Preview&quot;&gt;&lt;/a&gt;Preview&lt;/h1&gt;&lt;p&gt;C++ STL 标准模板库）是一套功能强大的 C++ 模板类，提供了通用的模板类和函数，这些模板类和</summary>
+      
+    
+    
+    
+    
+    <category term="C++" scheme="https://eveneko.com/tags/C/"/>
+    
+    <category term="STL" scheme="https://eveneko.com/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 动态分析</title>
+    <link href="https://eveneko.com/2021/07/15/android-dynamic-analysis/"/>
+    <id>https://eveneko.com/2021/07/15/android-dynamic-analysis/</id>
+    <published>2021-07-15T16:47:48.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul><li>monkey(引擎)</li><li>appium(引擎)</li><li>droidbot(自带算法)</li></ul><link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;monkey(引擎)&lt;/li&gt;
+&lt;li&gt;appium(引擎)&lt;/li&gt;
+&lt;li&gt;droidbot(自带算法)&lt;/li&gt;
+&lt;/ul</summary>
+      
+    
+    
+    
+    
+    <category term="Android" scheme="https://eveneko.com/tags/Android/"/>
+    
+    <category term="Dynamic-Analysis" scheme="https://eveneko.com/tags/Dynamic-Analysis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 静态分析</title>
+    <link href="https://eveneko.com/2021/07/15/android-static-analysis/"/>
+    <id>https://eveneko.com/2021/07/15/android-static-analysis/</id>
+    <published>2021-07-15T16:44:59.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul><li><a class="link"   href="https://github.com/soot-oss/soot" >soot<i class="fas fa-external-link-alt"></i></a></li><li>flowdroid(base soot)</li><li>iccta(base soot)</li><li>apktools(for manifest)  </li><li>bcel(dex2jar -&gt; bytecode)</li></ul><h1 id="soot"><a href="#soot" class="headerlink" title="soot"></a><a class="link"   href="https://github.com/soot-oss/soot" >soot<i class="fas fa-external-link-alt"></i></a></h1><h2 id="Referenct"><a href="#Referenct" class="headerlink" title="Referenct"></a>Referenct</h2><ul><li><a class="link"   href="https://github.com/soot-oss/soot/wiki" >wiki<i class="fas fa-external-link-alt"></i></a></li><li><a class="link"   href="https://soot-build.cs.uni-paderborn.de/public/origin/develop/soot/soot-develop/jdoc/" >api document<i class="fas fa-external-link-alt"></i></a></li><li><a class="link"   href="https://www.brics.dk/SootGuide/sootsurvivorsguide.pdf" >soot guide<i class="fas fa-external-link-alt"></i></a></li></ul><link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;link&quot;   href=&quot;https://github.com/soot-oss/soot&quot; &gt;soot&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="Android" scheme="https://eveneko.com/tags/Android/"/>
+    
+    <category term="Static-Analysis" scheme="https://eveneko.com/tags/Static-Analysis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - File Handling</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-file-handling/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-file-handling/</id>
+    <published>2021-07-12T17:07:34.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Reflection</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-reflection/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-reflection/</id>
+    <published>2021-07-12T17:07:11.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - First Class Functions</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-first-class-functions/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-first-class-functions/</id>
+    <published>2021-07-12T17:07:01.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Defer and Error Handling</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-defer-and-error-handling/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-defer-and-error-handling/</id>
+    <published>2021-07-12T17:06:40.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Object Oriented Programming</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-object-oriented-programming/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-object-oriented-programming/</id>
+    <published>2021-07-12T17:06:08.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Concurrency</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-concurrency/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-concurrency/</id>
+    <published>2021-07-12T17:05:36.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Interfaces</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-interfaces/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-interfaces/</id>
+    <published>2021-07-12T17:05:26.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Pointers, Structs and Methods</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-pointers-structs-and-methods/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-pointers-structs-and-methods/</id>
+    <published>2021-07-12T17:05:05.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - More types</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-more-types/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-more-types/</id>
+    <published>2021-07-12T17:04:31.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Arrays, Slices and Variadic Functions</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-arrays-slices-and-variadic-functions/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-arrays-slices-and-variadic-functions/</id>
+    <published>2021-07-12T17:04:07.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Conditional Statements and Loops</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-conditional-statements-and-loops/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-conditional-statements-and-loops/</id>
+    <published>2021-07-12T17:03:27.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Functions and Packages</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-functions-and-packages/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-functions-and-packages/</id>
+    <published>2021-07-12T17:02:47.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/markmap.css&quot; type=&quot;text/css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; type=&quot;text/css&quot;&gt;&lt;script src=&quot;/</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Variables, Types and Constants</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-variables-types-and-constants/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-variables-types-and-constants/</id>
+    <published>2021-07-12T17:02:18.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h1><h1 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h1><h1 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h1><link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Variables&quot;&gt;&lt;a href=&quot;#Variables&quot; class=&quot;headerlink&quot; title=&quot;Variables&quot;&gt;&lt;/a&gt;Variables&lt;/h1&gt;&lt;h1 id=&quot;Types&quot;&gt;&lt;a href=&quot;#Types&quot; class=&quot;header</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 - Introduction</title>
+    <link href="https://eveneko.com/2021/07/12/go-base-introduction/"/>
+    <id>https://eveneko.com/2021/07/12/go-base-introduction/</id>
+    <published>2021-07-12T17:01:31.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Introduction-and-Installation"><a href="#Introduction-and-Installation" class="headerlink" title="Introduction and Installation"></a>Introduction and Installation</h1><h2 id="Advantages-of-Go"><a href="#Advantages-of-Go" class="headerlink" title="Advantages of Go"></a>Advantages of Go</h2><ul><li>Simple syntax</li><li>Easy to write concurrent programs</li><li>Compiled language</li><li>Fast compilation</li><li>Static linking</li><li>Go Tooling</li><li>Garbage collection</li><li>Simple language specification</li><li>Opensource</li></ul><h2 id="Installation-and-Verification"><a href="#Installation-and-Verification" class="headerlink" title="Installation and Verification"></a>Installation and Verification</h2><ul><li> Installation(Mac)</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install go</span><br></pre></td></tr></table></figure><ul><li>Verification</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go version</span><br></pre></td></tr></table></figure><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://raw.githubusercontent.com/Eveneko/Source-Hosting/master/PicX/image.619i5f8i7aw0.png"                      alt="image"                ></p><h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><h2 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── bin</span><br><span class="line">│   └── hello</span><br><span class="line">└── src</span><br><span class="line">    └── hello</span><br><span class="line">        └── helloworld.go</span><br></pre></td></tr></table></figure><h2 id="helloworld-go-代码"><a href="#helloworld-go-代码" class="headerlink" title="helloworld.go 代码"></a><code>helloworld.go</code> 代码</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;  </span><br><span class="line">    fmt.Println(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><ul><li><p>run</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go run ./src/hello/helloworld.go</span><br></pre></td></tr></table></figure></li><li><p>install</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go install hello</span><br></pre></td></tr></table></figure></li><li><p>playground</p><p><a class="link"   href="https://play.golang.org/" >playground<i class="fas fa-external-link-alt"></i></a> 在线运行地址</p></li></ul><h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><p>Mac默认 <code>GOPATH=$HOME/go</code>，可在 <code>~/.zshrc</code> 中修改保存</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go env GOPATH</span><br></pre></td></tr></table></figure><h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span> <span class="comment">//2</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123; <span class="comment">//3  </span></span><br><span class="line">    fmt.Println(<span class="string">&quot;Hello World&quot;</span>) <span class="comment">//4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><code>package main</code>: 每个代码必须以 <code>package</code> 开头，包提供代码划分(code compartmentalisation)和可重用性(reusability)。</li><li><code>import &quot;fmt&quot;</code>: 导入包 ，<code>fmt</code> 将文本打印到标准输出。</li><li><code>func main()</code>: 程序从主函数开始。</li><li><code>fmt.Println(&quot;Hello World&quot;)</code>: 将文本写入标准输出。</li></ul><link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Introduction-and-Installation&quot;&gt;&lt;a href=&quot;#Introduction-and-Installation&quot; class=&quot;headerlink&quot; title=&quot;Introduction and Installation&quot;&gt;&lt;/a</summary>
+      
+    
+    
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 基础 (Golang tutorial series)</title>
+    <link href="https://eveneko.com/2021/07/10/go-base/"/>
+    <id>https://eveneko.com/2021/07/10/go-base/</id>
+    <published>2021-07-10T18:40:24.000Z</published>
+    <updated>2021-07-19T01:57:17.934Z</updated>
+    
+    <content type="html"><![CDATA[<p>本教程来源 <a class="link"   href="https://golangbot.com/learn-golang-series/" >golangbot<i class="fas fa-external-link-alt"></i></a>，加入一些自己学习时候遇到的问题，仅供参考。</p><h1 id=""><a href="#" class="headerlink" title=""></a><a href="/2021/07/12/go-base-introduction/" title="Introduction">Introduction</a></h1><ol><li>Introduction and Installation</li><li>Hello World</li></ol><h1 id="-1"><a href="#-1" class="headerlink" title=""></a><a href="/2021/07/12/go-base-variables-types-and-constants/" title="Variables, Types and Constants">Variables, Types and Constants</a></h1><ol start="3"><li>Variables</li><li>Types</li><li>Constants</li></ol><h1 id="-2"><a href="#-2" class="headerlink" title=""></a><a href="/2021/07/12/go-base-functions-and-packages/" title="Functions and Packages">Functions and Packages</a></h1><ol start="6"><li>Functions</li><li>Packages</li></ol><h1 id="-3"><a href="#-3" class="headerlink" title=""></a><a href="/2021/07/12/go-base-conditional-statements-and-loops/" title="Conditional Statements and Loops">Conditional Statements and Loops</a></h1><ol start="8"><li>if else statement</li><li>Loops</li><li>Switch Statement</li></ol><h1 id="-4"><a href="#-4" class="headerlink" title=""></a><a href="/2021/07/12/go-base-arrays-slices-and-variadic-functions/" title="Arrays, Slices and Variadic Functions">Arrays, Slices and Variadic Functions</a></h1><ol start="11"><li>Arrays and Slices</li><li>Variadic Functions</li></ol><h1 id="-5"><a href="#-5" class="headerlink" title=""></a><a href="/2021/07/12/go-base-more-types/" title="More types">More types</a></h1><ol start="13"><li>Maps</li><li>Strings</li></ol><h1 id="-6"><a href="#-6" class="headerlink" title=""></a><a href="/2021/07/12/go-base-pointers-structs-and-methods/" title="Pointers, Structs and Methods">Pointers, Structs and Methods</a></h1><ol start="15"><li>Pointers</li><li>Structs</li><li>Methods</li></ol><h1 id="-7"><a href="#-7" class="headerlink" title=""></a><a href="/2021/07/12/go-base-interfaces/" title="Interfaces">Interfaces</a></h1><ol start="18"><li>Interfaces. I</li><li>Interfaces. II</li></ol><h1 id="-8"><a href="#-8" class="headerlink" title=""></a><a href="/2021/07/12/go-base-concurrency/" title="Concurrency">Concurrency</a></h1><ol start="20"><li>Introduction to Concurrency</li><li>Goroutines</li><li>Channels</li><li>Buffered Channels and Worker Pools</li><li>Select</li><li>Mutex</li></ol><h1 id="-9"><a href="#-9" class="headerlink" title=""></a><a href="/2021/07/12/go-base-object-oriented-programming/" title="Object Oriented Programming">Object Oriented Programming</a></h1><ol start="26"><li>Structs Instead of Classes</li><li>Composition Instead of Inheritance</li><li>Polymorphism</li></ol><h1 id="-10"><a href="#-10" class="headerlink" title=""></a><a href="/2021/07/12/go-base-defer-and-error-handling/" title="Defer and Error Handling">Defer and Error Handling</a></h1><ol start="29"><li>Defer</li><li>Error Handling</li><li>Custom Errors</li><li>Panic and Recover</li></ol><h1 id="-11"><a href="#-11" class="headerlink" title=""></a><a href="/2021/07/12/go-base-first-class-functions/" title="First Class Functions">First Class Functions</a></h1><ol start="33"><li>First Class Functions</li></ol><h1 id="-12"><a href="#-12" class="headerlink" title=""></a><a href="/2021/07/12/go-base-reflection/" title="Reflection">Reflection</a></h1><ol start="34"><li>Reflection</li></ol><h1 id="-13"><a href="#-13" class="headerlink" title=""></a><a href="/2021/07/12/go-base-file-handling/" title="File Handling">File Handling</a></h1><ol start="35"><li>Reading Files</li><li>Writing Files</li></ol><link rel="stylesheet" href="/css/markmap.css" type="text/css"><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本教程来源 &lt;a class=&quot;link&quot;   href=&quot;https://golangbot.com/learn-golang-series/&quot; &gt;golangbot&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;，加入一些自己学习</summary>
+      
+    
+    
+    
+    <category term="Study" scheme="https://eveneko.com/categories/Study/"/>
+    
+    
+    <category term="Tutorial" scheme="https://eveneko.com/tags/Tutorial/"/>
+    
+    <category term="Go" scheme="https://eveneko.com/tags/Go/"/>
+    
+  </entry>
+  
+</feed>
