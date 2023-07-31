@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Router on Neko Nest</title>
+    <link>https://eveneko.com/tags/router/</link>
+    <description>Recent content in Router on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 03 Aug 2021 17:30:09 +0800</lastBuildDate><atom:link href="https://eveneko.com/tags/router/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asus Router 指北</title>
+      <link>https://eveneko.com/posts/asus-router-tutorial/</link>
+      <pubDate>Tue, 03 Aug 2021 17:30:09 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/asus-router-tutorial/</guid>
+      <description>设备 你需要一台可以装梅林系统的路由，最简单的就去购买华硕的路由器，当然那种和华硕配件一样的其他路由器也可以配置。 我的路由器是 RT-AX56U，其实不是很推荐，因为没有usb接口且 jffs 分区过小(15M)，很多功能都无法完美使用。当然，还是有优点的，WiFi6+ASUS+相对便宜的价格</description>
+    </item>
+    
+  </channel>
+</rss>

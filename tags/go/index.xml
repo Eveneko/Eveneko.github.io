@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Neko Nest</title>
+    <link>https://eveneko.com/tags/go/</link>
+    <description>Recent content in Go on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 09 Jul 2021 21:41:46 +0800</lastBuildDate><atom:link href="https://eveneko.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 学习路线</title>
+      <link>https://eveneko.com/posts/go-tutorial/</link>
+      <pubDate>Fri, 09 Jul 2021 21:41:46 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/go-tutorial/</guid>
+      <description>Go 模块 web 开发框架: gin orm 库: gorm 日志: logrus, zap Redis 客户端: go-redis Session 管理: go-session Go 设计模式: go-patterns Gin 官方文档: Gin 学习文章参考 Golang-100-Days Go语言高级编程 Go语言圣经 Go Modules 入门 跟煎鱼学Go golangbot Go 开发者成长路线图 参考项目 gin-vue-admin go-admin 参考文档 gin-vue-admin server</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Neko Nest</title>
     <link>https://eveneko.com/tags/hugo/</link>
@@ -8,12 +8,12 @@
     <language>zh</language>
     <lastBuildDate>Sun, 30 Jul 2023 18:39:39 +0800</lastBuildDate><atom:link href="https://eveneko.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello Hugo Start</title>
-      <link>https://eveneko.com/posts/hello-hugo-start/</link>
+      <title>Hugo 指北</title>
+      <link>https://eveneko.com/posts/hugo-tutorial/</link>
       <pubDate>Sun, 30 Jul 2023 18:39:39 +0800</pubDate>
       
-      <guid>https://eveneko.com/posts/hello-hugo-start/</guid>
-      <description>本地安装 1 2 3 4 5 # 新建hugo站点 hugo new site &amp;lt;your-blob&amp;gt; # 添加主题 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 本地部署 1 hugo server -D</description>
+      <guid>https://eveneko.com/posts/hugo-tutorial/</guid>
+      <description>本地安装 1 2 3 4 5 # 新建hugo站点 hugo new site &amp;lt;your-blob&amp;gt; # 添加主题 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 新建文章 1 hugo new &amp;lt;post-path&amp;gt; 本地部署 1 hugo server -D Github Action 新建两个repository: Blob-Source: 私有，博客源码 xxx.github.io: 公开，博客页面 添加个人访问令牌作为TOKEN存储库中调用的Secret 在 Settings -&amp;gt; Developer Settings -&amp;gt; Personal access tokens (classic)，注意分配权限为 repo, workflow 在 Blob-Source 中</description>
     </item>
     
   </channel>

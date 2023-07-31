@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Neko Nest</title>
     <link>https://eveneko.com/categories/tutorial/</link>
@@ -8,12 +8,84 @@
     <language>zh</language>
     <lastBuildDate>Sun, 30 Jul 2023 18:39:39 +0800</lastBuildDate><atom:link href="https://eveneko.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello Hugo Start</title>
-      <link>https://eveneko.com/posts/hello-hugo-start/</link>
+      <title>Hugo 指北</title>
+      <link>https://eveneko.com/posts/hugo-tutorial/</link>
       <pubDate>Sun, 30 Jul 2023 18:39:39 +0800</pubDate>
       
-      <guid>https://eveneko.com/posts/hello-hugo-start/</guid>
-      <description>本地安装 1 2 3 4 5 # 新建hugo站点 hugo new site &amp;lt;your-blob&amp;gt; # 添加主题 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 本地部署 1 hugo server -D</description>
+      <guid>https://eveneko.com/posts/hugo-tutorial/</guid>
+      <description>本地安装 1 2 3 4 5 # 新建hugo站点 hugo new site &amp;lt;your-blob&amp;gt; # 添加主题 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 新建文章 1 hugo new &amp;lt;post-path&amp;gt; 本地部署 1 hugo server -D Github Action 新建两个repository: Blob-Source: 私有，博客源码 xxx.github.io: 公开，博客页面 添加个人访问令牌作为TOKEN存储库中调用的Secret 在 Settings -&amp;gt; Developer Settings -&amp;gt; Personal access tokens (classic)，注意分配权限为 repo, workflow 在 Blob-Source 中</description>
+    </item>
+    
+    <item>
+      <title>线段树(Segment Tree)入门</title>
+      <link>https://eveneko.com/posts/algorithm-tutorial/segemnt-tree/</link>
+      <pubDate>Wed, 02 Nov 2022 12:40:37 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/algorithm-tutorial/segemnt-tree/</guid>
+      <description>例题 已知一个数列，你需要进行下面两种操作： 将某区间每一个数加上 k 求出某区间每一个数的和。 引入 线段树是算法竞赛中常用的用来维护 区间信息 的数据结构。 线段树可以在 $O(logN)$ 的时间复杂度内实现单点修改、区间修改、区间查询（区间求和，求区间最大值，求区间最小值）等操作。 条件 线段树维护的信息可以认为</description>
+    </item>
+    
+    <item>
+      <title>Fcpx 入门</title>
+      <link>https://eveneko.com/posts/fcpx-tutorial/</link>
+      <pubDate>Fri, 01 Jul 2022 02:17:26 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/fcpx-tutorial/</guid>
+      <description>工具箱 mkv转mp4 https://github.com/Yang-Xijie/mkv2mp4_fcp mCamRig 插件能够简单快速的将图层实现摄像机三维运动和翻转角度控制 commandpost 资料 插件下载 https://www.motionvfx.com FCPX插件及剪辑课程 https://pan.baidu.com/s/1mYmg6LcsKDjL_4gaFPX8HQ?pwd=r82m 提取码: r82m 高速下载地址 https://www.123pan.com/s/arPRVv-sE9D3 QA h264 和 h265 的区别 H.265是新的编码协议，也即是H.264的升级版。H.265标准保留H.264原来的某些技术，同时对一些相关的技术加以改</description>
+    </item>
+    
+    <item>
+      <title>Vue 入门</title>
+      <link>https://eveneko.com/posts/vue-tutorial/</link>
+      <pubDate>Tue, 10 May 2022 15:38:54 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/vue-tutorial/</guid>
+      <description>前言 学习路线主要是根据Vue vben admin，一个免费开源的中后台模版来学习。 内容 node 和 git -项目开发环境 Vite - 熟悉 vite 特性 Vue3 - 熟悉 Vue 基础语法 TypeScript - 熟悉TypeScript基本语法 Es6+ - 熟悉 es6 基本语法 Vue-Router-Next - 熟悉 vue-router 基本使用 Ant-Design-Vue - ui 基本使用 Mock.js - mockjs 基本语法 参考 手撕vben</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi 指北</title>
+      <link>https://eveneko.com/posts/raspberry-pi-tutorial/</link>
+      <pubDate>Sun, 09 Jan 2022 19:50:35 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/raspberry-pi-tutorial/</guid>
+      <description>女朋友送的礼物，当然要好好折腾折腾 引言 树莓派到如今已经发布了4代，性能自然是越来越强了，每一代都分为A、B型，也有比较特殊的型号比如去掉大部分接口很小巧的树莓派Zero、去掉所有接口的树莓派计算型CM（Compute Module）、B型的增强型B+等。其中B型是最常用的，而A、B</description>
+    </item>
+    
+    <item>
+      <title>Klee 入门</title>
+      <link>https://eveneko.com/posts/klee-tutorial/</link>
+      <pubDate>Thu, 18 Nov 2021 18:28:18 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/klee-tutorial/</guid>
+      <description>安装依赖 for ubuntu 1 sudo apt-get install build-essential curl libcap-dev git cmake libncurses5-dev python-minimal python-pip unzip libtcmalloc-minimal4 libgoogle-perftools-dev libsqlite3-dev doxygen for ubuntu &amp;gt;= 18.04 1 sudo apt-get install python3 python3-pip gcc-multilib g++-multilib 查看ubuntu版本 1 cat /etc/lsb-release 安装lit以启用测试，tabulate支持klee-stats和wllvm中的其他功能，以便更容易将程序编译到LLVM位码 1 pip3 install lit tabulate wllvm 安装 llvm9 1 sudo apt-get install clang-9 llvm-9 llvm-9-dev llvm-9-tools 安装约束求解器 任选其一 STP(recommend) Z3 metaSTM</description>
+    </item>
+    
+    <item>
+      <title>Asus Router 指北</title>
+      <link>https://eveneko.com/posts/asus-router-tutorial/</link>
+      <pubDate>Tue, 03 Aug 2021 17:30:09 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/asus-router-tutorial/</guid>
+      <description>设备 你需要一台可以装梅林系统的路由，最简单的就去购买华硕的路由器，当然那种和华硕配件一样的其他路由器也可以配置。 我的路由器是 RT-AX56U，其实不是很推荐，因为没有usb接口且 jffs 分区过小(15M)，很多功能都无法完美使用。当然，还是有优点的，WiFi6+ASUS+相对便宜的价格</description>
+    </item>
+    
+    <item>
+      <title>Go 学习路线</title>
+      <link>https://eveneko.com/posts/go-tutorial/</link>
+      <pubDate>Fri, 09 Jul 2021 21:41:46 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/go-tutorial/</guid>
+      <description>Go 模块 web 开发框架: gin orm 库: gorm 日志: logrus, zap Redis 客户端: go-redis Session 管理: go-session Go 设计模式: go-patterns Gin 官方文档: Gin 学习文章参考 Golang-100-Days Go语言高级编程 Go语言圣经 Go Modules 入门 跟煎鱼学Go golangbot Go 开发者成长路线图 参考项目 gin-vue-admin go-admin 参考文档 gin-vue-admin server</description>
+    </item>
+    
+    <item>
+      <title>Docker 使用入门</title>
+      <link>https://eveneko.com/posts/docker-tutorial/</link>
+      <pubDate>Thu, 01 Jul 2021 23:14:46 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/docker-tutorial/</guid>
+      <description>Docker Install 1 sudo apt install docker.io Docker 配置镜像加速器 针对 Docker 客户端版本大于 1.10.0 的用户，可以通过修改daemon配置文件 /etc/docker/daemon.json 来使用加速器 1 2 3 4 5 6 7 8 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &amp;lt;&amp;lt;-&amp;#39;EOF&amp;#39; { &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://4pvkfoz4.mirror.aliyuncs.com&amp;#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker Docker 参数详解 docker image 查看本机镜像 docker search 搜索镜像 docker pull 拉取镜像 docker run [OPTIONS] IMAGE [COMMAND] [ARG...] 执行镜像 -d, --detach=false， 指定容器运行于前</description>
     </item>
     
   </channel>

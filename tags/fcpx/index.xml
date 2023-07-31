@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FCPX on Neko Nest</title>
+    <link>https://eveneko.com/tags/fcpx/</link>
+    <description>Recent content in FCPX on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 01 Jul 2022 02:17:26 +0800</lastBuildDate><atom:link href="https://eveneko.com/tags/fcpx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fcpx 入门</title>
+      <link>https://eveneko.com/posts/fcpx-tutorial/</link>
+      <pubDate>Fri, 01 Jul 2022 02:17:26 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/fcpx-tutorial/</guid>
+      <description>工具箱 mkv转mp4 https://github.com/Yang-Xijie/mkv2mp4_fcp mCamRig 插件能够简单快速的将图层实现摄像机三维运动和翻转角度控制 commandpost 资料 插件下载 https://www.motionvfx.com FCPX插件及剪辑课程 https://pan.baidu.com/s/1mYmg6LcsKDjL_4gaFPX8HQ?pwd=r82m 提取码: r82m 高速下载地址 https://www.123pan.com/s/arPRVv-sE9D3 QA h264 和 h265 的区别 H.265是新的编码协议，也即是H.264的升级版。H.265标准保留H.264原来的某些技术，同时对一些相关的技术加以改</description>
+    </item>
+    
+  </channel>
+</rss>

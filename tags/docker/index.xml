@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Neko Nest</title>
+    <link>https://eveneko.com/tags/docker/</link>
+    <description>Recent content in Docker on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 01 Jul 2021 23:14:46 +0800</lastBuildDate><atom:link href="https://eveneko.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker 使用入门</title>
+      <link>https://eveneko.com/posts/docker-tutorial/</link>
+      <pubDate>Thu, 01 Jul 2021 23:14:46 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/docker-tutorial/</guid>
+      <description>Docker Install 1 sudo apt install docker.io Docker 配置镜像加速器 针对 Docker 客户端版本大于 1.10.0 的用户，可以通过修改daemon配置文件 /etc/docker/daemon.json 来使用加速器 1 2 3 4 5 6 7 8 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &amp;lt;&amp;lt;-&amp;#39;EOF&amp;#39; { &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://4pvkfoz4.mirror.aliyuncs.com&amp;#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker Docker 参数详解 docker image 查看本机镜像 docker search 搜索镜像 docker pull 拉取镜像 docker run [OPTIONS] IMAGE [COMMAND] [ARG...] 执行镜像 -d, --detach=false， 指定容器运行于前</description>
+    </item>
+    
+  </channel>
+</rss>

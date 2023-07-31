@@ -5,10 +5,10 @@
     <loc>https://eveneko.com/categories/</loc>
     <lastmod>2023-07-30T18:39:39+08:00</lastmod>
   </url><url>
-    <loc>https://eveneko.com/posts/hello-hugo-start/</loc>
+    <loc>https://eveneko.com/tags/hugo/</loc>
     <lastmod>2023-07-30T18:39:39+08:00</lastmod>
   </url><url>
-    <loc>https://eveneko.com/tags/hugo/</loc>
+    <loc>https://eveneko.com/posts/hugo-tutorial/</loc>
     <lastmod>2023-07-30T18:39:39+08:00</lastmod>
   </url><url>
     <loc>https://eveneko.com/</loc>
@@ -22,6 +22,74 @@
   </url><url>
     <loc>https://eveneko.com/categories/tutorial/</loc>
     <lastmod>2023-07-30T18:39:39+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/master-thesis/</loc>
+    <lastmod>2022-11-11T16:35:38+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/algorithm/</loc>
+    <lastmod>2022-11-02T12:40:37+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/algorithm-tutorial/</loc>
+    <lastmod>2022-11-02T12:40:37+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/segment-tree/</loc>
+    <lastmod>2022-11-02T12:40:37+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/algorithm-tutorial/segemnt-tree/</loc>
+    <lastmod>2022-11-02T12:40:37+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/firmware/</loc>
+    <lastmod>2022-07-10T17:27:17+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/firmware-readpaper/</loc>
+    <lastmod>2022-07-10T17:27:17+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/paper/</loc>
+    <lastmod>2022-07-10T17:27:17+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/fcpx/</loc>
+    <lastmod>2022-07-01T02:17:26+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/fcpx-tutorial/</loc>
+    <lastmod>2022-07-01T02:17:26+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/vue/</loc>
+    <lastmod>2022-05-10T15:38:54+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/vue-tutorial/</loc>
+    <lastmod>2022-05-10T15:38:54+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/raspberry-pi/</loc>
+    <lastmod>2022-01-09T19:50:35+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/raspberry-pi-tutorial/</loc>
+    <lastmod>2022-01-09T19:50:35+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/klee/</loc>
+    <lastmod>2021-11-18T18:28:18+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/klee-tutorial/</loc>
+    <lastmod>2021-11-18T18:28:18+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/asus-router-tutorial/</loc>
+    <lastmod>2021-08-03T17:30:09+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/router/</loc>
+    <lastmod>2021-08-03T17:30:09+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/go/</loc>
+    <lastmod>2021-07-09T21:41:46+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/go-tutorial/</loc>
+    <lastmod>2021-07-09T21:41:46+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/tags/docker/</loc>
+    <lastmod>2021-07-01T23:14:46+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/posts/docker-tutorial/</loc>
+    <lastmod>2021-07-01T23:14:46+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/about/</loc>
   </url><url>
     <loc>https://eveneko.com/archives/</loc>
   </url><url>

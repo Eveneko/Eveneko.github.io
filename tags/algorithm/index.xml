@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on Neko Nest</title>
+    <link>https://eveneko.com/tags/algorithm/</link>
+    <description>Recent content in Algorithm on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 02 Nov 2022 12:40:37 +0800</lastBuildDate><atom:link href="https://eveneko.com/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>线段树(Segment Tree)入门</title>
+      <link>https://eveneko.com/posts/algorithm-tutorial/segemnt-tree/</link>
+      <pubDate>Wed, 02 Nov 2022 12:40:37 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/algorithm-tutorial/segemnt-tree/</guid>
+      <description>例题 已知一个数列，你需要进行下面两种操作： 将某区间每一个数加上 k 求出某区间每一个数的和。 引入 线段树是算法竞赛中常用的用来维护 区间信息 的数据结构。 线段树可以在 $O(logN)$ 的时间复杂度内实现单点修改、区间修改、区间查询（区间求和，求区间最大值，求区间最小值）等操作。 条件 线段树维护的信息可以认为</description>
+    </item>
+    
+  </channel>
+</rss>

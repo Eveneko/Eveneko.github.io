@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firmware on Neko Nest</title>
+    <link>https://eveneko.com/tags/firmware/</link>
+    <description>Recent content in Firmware on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 10 Jul 2022 17:27:17 +0800</lastBuildDate><atom:link href="https://eveneko.com/tags/firmware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firmware Readpaper</title>
+      <link>https://eveneko.com/posts/firmware-readpaper/</link>
+      <pubDate>Sun, 10 Jul 2022 17:27:17 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/firmware-readpaper/</guid>
+      <description>本页面收录和车辆固件在模拟环境下模糊测试相关的论文。(43篇) All Papers(Classification according to Subject) Survey/Review Detecting Vulnerability on IoT Device Firmware: A Survey (2022) {% spoiler more %} 物联网 (IoT) 设备占所有网络连接端点的 30%，引入了漏洞和新颖的攻击，使许多公司成为网络犯罪分子的主要目标。为了应对这种日益增加的威胁面，每个部署物联网设备的组织都需要考虑安全风险，以确</description>
+    </item>
+    
+  </channel>
+</rss>

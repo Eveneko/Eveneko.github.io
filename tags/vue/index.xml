@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on Neko Nest</title>
+    <link>https://eveneko.com/tags/vue/</link>
+    <description>Recent content in Vue on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 10 May 2022 15:38:54 +0800</lastBuildDate><atom:link href="https://eveneko.com/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue 入门</title>
+      <link>https://eveneko.com/posts/vue-tutorial/</link>
+      <pubDate>Tue, 10 May 2022 15:38:54 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/vue-tutorial/</guid>
+      <description>前言 学习路线主要是根据Vue vben admin，一个免费开源的中后台模版来学习。 内容 node 和 git -项目开发环境 Vite - 熟悉 vite 特性 Vue3 - 熟悉 Vue 基础语法 TypeScript - 熟悉TypeScript基本语法 Es6+ - 熟悉 es6 基本语法 Vue-Router-Next - 熟悉 vue-router 基本使用 Ant-Design-Vue - ui 基本使用 Mock.js - mockjs 基本语法 参考 手撕vben</description>
+    </item>
+    
+  </channel>
+</rss>
