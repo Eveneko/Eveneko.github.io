@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Neko Nest</title>
+    <link>https://eveneko.com/</link>
+    <description>Recent content on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 30 Jul 2023 18:39:39 +0800</lastBuildDate><atom:link href="https://eveneko.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Hugo Start</title>
+      <link>https://eveneko.com/posts/hello-hugo-start/</link>
+      <pubDate>Sun, 30 Jul 2023 18:39:39 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/hello-hugo-start/</guid>
+      <description>本地安装 1 2 3 4 5 # 新建hugo站点 hugo new site &amp;lt;your-blob&amp;gt; # 添加主题 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 本地部署 1 hugo server -D</description>
+    </item>
+    
+  </channel>
+</rss>
