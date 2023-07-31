@@ -6,7 +6,16 @@
     <description>Recent content on Neko Nest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 30 Jul 2023 18:39:39 +0800</lastBuildDate><atom:link href="https://eveneko.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Aug 2023 03:51:13 +0800</lastBuildDate><atom:link href="https://eveneko.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023秋招死亡笔记</title>
+      <link>https://eveneko.com/posts/update/2023-find-job/</link>
+      <pubDate>Tue, 01 Aug 2023 03:51:13 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/update/2023-find-job/</guid>
+      <description>公司 日期 招聘链接 截止时间 岗位 工作地点 投递链接 状态 蔚来 c++/系统优化 北京/上海 实习转正ing</description>
+    </item>
+    
     <item>
       <title>Hugo 指北</title>
       <link>https://eveneko.com/posts/hugo-tutorial/</link>
