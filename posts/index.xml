@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Neko Nest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 01 Aug 2023 03:51:13 +0800</lastBuildDate><atom:link href="https://eveneko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Aug 2023 22:26:07 +0800</lastBuildDate><atom:link href="https://eveneko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>中国TooGoodToGo开发探索</title>
+      <link>https://eveneko.com/posts/tgtg/</link>
+      <pubDate>Sun, 06 Aug 2023 22:26:07 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/tgtg/</guid>
+      <description>Q&amp;amp;A 商品来源 烘焙店 临期食品时间 面包/点心: &amp;lt; 1 day 饮品: 未知 目标人群 中低收入群体，包括学生 服务形式 提供临期食品信息，线上预定 店面宣传 盈利方式 前期： 流量，广告 中后期： 商品供应方：佣金/手续费 成本 服务搭建成本 商品供应方：前期无成本 服务范围 前期：日照 中后期：青岛 竞品 北京，上海，济南 ✅ 日照 ❎</description>
+    </item>
+    
     <item>
       <title>2023秋招死亡笔记</title>
       <link>https://eveneko.com/posts/update/2023-find-job/</link>
