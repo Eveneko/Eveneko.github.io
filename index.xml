@@ -6,7 +6,16 @@
     <description>Recent content on Neko Nest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 06 Aug 2023 22:26:07 +0800</lastBuildDate><atom:link href="https://eveneko.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Aug 2023 18:05:56 +0800</lastBuildDate><atom:link href="https://eveneko.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[凉]腾讯 C&#43;&#43;后台开发 一面</title>
+      <link>https://eveneko.com/posts/interview/2023-tx-1/</link>
+      <pubDate>Thu, 17 Aug 2023 18:05:56 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/interview/2023-tx-1/</guid>
+      <description>时间: 2023-08-17 14:30-16:00 部门: 腾讯，PCG，QQ 场外因素: 面试官有事去了，换了一个同事来面试的 面试后一个小时内结束流程&amp;hellip; 自我介绍 好久没面试了，项目经历更新了，没有准备小作文，临床发挥一般，有一点小乱，不过逻辑是自洽的。 反馈：背景不错，经历不错，看起来挺自信的。 八股 计算机网络 ipv</description>
+    </item>
+    
     <item>
       <title>中国TooGoodToGo开发探索</title>
       <link>https://eveneko.com/posts/tgtg/</link>
@@ -22,7 +31,7 @@
       <pubDate>Tue, 01 Aug 2023 03:51:13 +0800</pubDate>
       
       <guid>https://eveneko.com/posts/update/2023-find-job/</guid>
-      <description>公司 更新日期 岗位 工作地点 状态 面经 蔚来 2023-07-20 自动驾驶系统优化 北京/上海 实习转正ing 百度 2023-08-13 C++/PHP/GO研发工程师(J59431) 北京 共享中 字节 2023-08-10 提前批-后端开发工程师-基础架构 北京 流程终止 字节 2023-08-11 后端开发工程师-基础架构 北京 评估中 字节 2023-08-10 后端开发工程师-飞书技术中台 北京 已投递 腾讯 2023-08-09</description>
+      <description>记录 公司 更新日期 岗位 工作地点 状态 蔚来 2023-07-20 自动驾驶系统优化 北京/上海 实习转正ing 百度 2023-08-17 C++/PHP/GO研发工程师(J59431) 北京 一面 字节 2023-08-10 提前批-后端开发工程师-基础架构 北京 流程终止 字节 2023-08-11 后端开发工程师-基础架构 北京 评估中 字节 2023-08-10 后端开发工程师-飞书技术中台 北京 已投递 腾讯 2023-08-17 后</description>
     </item>
     
     <item>

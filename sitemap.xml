@@ -2,11 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://eveneko.com/posts/interview/2023-tx-1/</loc>
+    <lastmod>2023-08-17T18:05:56+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/categories/interview/</loc>
+    <lastmod>2023-08-17T18:05:56+08:00</lastmod>
+  </url><url>
     <loc>https://eveneko.com/</loc>
-    <lastmod>2023-08-06T22:26:07+08:00</lastmod>
+    <lastmod>2023-08-17T18:05:56+08:00</lastmod>
   </url><url>
     <loc>https://eveneko.com/posts/</loc>
-    <lastmod>2023-08-06T22:26:07+08:00</lastmod>
+    <lastmod>2023-08-17T18:05:56+08:00</lastmod>
+  </url><url>
+    <loc>https://eveneko.com/categories/</loc>
+    <lastmod>2023-08-17T18:05:56+08:00</lastmod>
   </url><url>
     <loc>https://eveneko.com/posts/tgtg/</loc>
     <lastmod>2023-08-06T22:26:07+08:00</lastmod>
@@ -21,9 +30,6 @@
     <lastmod>2023-08-01T03:51:13+08:00</lastmod>
   </url><url>
     <loc>https://eveneko.com/tags/</loc>
-    <lastmod>2023-08-01T03:51:13+08:00</lastmod>
-  </url><url>
-    <loc>https://eveneko.com/categories/</loc>
     <lastmod>2023-08-01T03:51:13+08:00</lastmod>
   </url><url>
     <loc>https://eveneko.com/tags/hugo/</loc>

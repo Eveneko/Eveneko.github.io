@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Interview on Neko Nest</title>
+    <link>https://eveneko.com/categories/interview/</link>
+    <description>Recent content in Interview on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 17 Aug 2023 18:05:56 +0800</lastBuildDate><atom:link href="https://eveneko.com/categories/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[凉]腾讯 C&#43;&#43;后台开发 一面</title>
+      <link>https://eveneko.com/posts/interview/2023-tx-1/</link>
+      <pubDate>Thu, 17 Aug 2023 18:05:56 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/interview/2023-tx-1/</guid>
+      <description>时间: 2023-08-17 14:30-16:00 部门: 腾讯，PCG，QQ 场外因素: 面试官有事去了，换了一个同事来面试的 面试后一个小时内结束流程&amp;hellip; 自我介绍 好久没面试了，项目经历更新了，没有准备小作文，临床发挥一般，有一点小乱，不过逻辑是自洽的。 反馈：背景不错，经历不错，看起来挺自信的。 八股 计算机网络 ipv</description>
+    </item>
+    
+  </channel>
+</rss>
