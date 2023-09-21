@@ -6,7 +6,34 @@
     <description>Recent content in Interview on Neko Nest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 28 Aug 2023 14:44:00 +0800</lastBuildDate><atom:link href="https://eveneko.com/categories/interview/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Sep 2023 18:09:36 +0800</lastBuildDate><atom:link href="https://eveneko.com/categories/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[过] 腾讯 后台开发 一面</title>
+      <link>https://eveneko.com/posts/interview/2023-tx-5/</link>
+      <pubDate>Thu, 21 Sep 2023 18:09:36 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/interview/2023-tx-5/</guid>
+      <description>时间: 2023-09-21 14:00-15:00 部门: PCG，QQ，短视频推荐 自我介绍 最近自我介绍的时间有意缩短了，留出时间给面试官问他想问的。 问答 rpc服务，top发现cpu占用率上不去，只有一个线程100%，其他线程闲置，排查一下原因 如何提升rpc性能 连接复用，如何对应请求和回复 epoll+线程池，io比较重，如</description>
+    </item>
+    
+    <item>
+      <title>快手 C&#43;&#43;开发工程师 二面</title>
+      <link>https://eveneko.com/posts/interview/2023-ks-2/</link>
+      <pubDate>Wed, 20 Sep 2023 20:08:44 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/interview/2023-ks-2/</guid>
+      <description>时间: 2023-09-20 19:00-20:00 部门: 广告, 大模型推理平台 自我介绍 问答 c++ vector set unordered_set 插入10w次，速度 实现hashmap 并发 hashmap 实现lru缓存 并发 无锁 实现队列 两个数组，整数，有序，求交集 一个很长，一个很短 两个都很长，但是交集很小</description>
+    </item>
+    
+    <item>
+      <title>上海移动 一面</title>
+      <link>https://eveneko.com/posts/interview/2023-yd-1/</link>
+      <pubDate>Wed, 20 Sep 2023 16:45:37 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/interview/2023-yd-1/</guid>
+      <description>时间: 2023-09-20 16:30 5分钟面试 自我介绍 2分钟 问答 简历上的链接是什么 个人主页 看你报了很多大厂 私企开的早，你们上周来学校宣讲才报 想做什么方向 技术 接受转岗吗 想发挥自己的优势 这是一面，过了会有笔试，笔试过了会有二面。 :)</description>
+    </item>
+    
     <item>
       <title>通用面经</title>
       <link>https://eveneko.com/posts/interview/mj/</link>
