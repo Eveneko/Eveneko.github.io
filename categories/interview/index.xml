@@ -6,16 +6,7 @@
     <description>Recent content in Interview on Neko Nest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 13 Oct 2023 20:25:09 +0800</lastBuildDate><atom:link href="https://eveneko.com/categories/interview/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>腾讯 IEG 游戏国际发行技术中台 一面</title>
-      <link>https://eveneko.com/posts/interview/2023-tx-9/</link>
-      <pubDate>Fri, 13 Oct 2023 20:25:09 +0800</pubDate>
-      
-      <guid>https://eveneko.com/posts/interview/2023-tx-9/</guid>
-      <description>据说这个部门铁KPI面，我去牛客上面看了之前先人的面经，好家伙，题目是一点都不带变的，咱先提前“押”题。 八股 手撕代码</description>
-    </item>
-    
+    <lastBuildDate>Thu, 21 Sep 2023 18:09:36 +0800</lastBuildDate><atom:link href="https://eveneko.com/categories/interview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[过] 腾讯 后台开发 一面</title>
       <link>https://eveneko.com/posts/interview/2023-tx-5/</link>
@@ -41,15 +32,6 @@
       
       <guid>https://eveneko.com/posts/interview/2023-yd-1/</guid>
       <description>时间: 2023-09-20 16:30 5分钟面试 自我介绍 2分钟 问答 简历上的链接是什么 个人主页 看你报了很多大厂 私企开的早，你们上周来学校宣讲才报 想做什么方向 技术 接受转岗吗 想发挥自己的优势 这是一面，过了会有笔试，笔试过了会有二面。 :)</description>
-    </item>
-    
-    <item>
-      <title>通用面经</title>
-      <link>https://eveneko.com/posts/interview/mj/</link>
-      <pubDate>Mon, 28 Aug 2023 14:44:00 +0800</pubDate>
-      
-      <guid>https://eveneko.com/posts/interview/mj/</guid>
-      <description>C++ C++ 原子变量 atomic https://zhuanlan.zhihu.com/p/599202353?utm_id=0 C++11语法特性 初始化列表 四种cast 委托构造和继承构造 1 using Base::Base; 关键字 auto decltype final/override default/delete/explicit const/constexpr using/deftype thread_local Lambda 表达式 lambda std::function std::bind 智能指针 Network OS Redis 手撕代码</description>
     </item>
     
     <item>
