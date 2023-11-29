@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Life on Neko Nest</title>
+    <link>https://eveneko.com/categories/life/</link>
+    <description>Recent content in Life on Neko Nest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 29 Nov 2023 14:14:07 +0800</lastBuildDate><atom:link href="https://eveneko.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>北漂指北</title>
+      <link>https://eveneko.com/posts/life/</link>
+      <pubDate>Wed, 29 Nov 2023 14:14:07 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/life/</guid>
+      <description>“我一路向北” 未来两三年至少都会在北京度过，记录一些在北京生活遇到的问题和解决方案。 租房 北京有住房公积金租房提取机制 租房提取条件 申请人及配偶在北京市行政区域内无自有住房且租赁住房的。 申请人已连续足额缴存住房公积金3个月（含）以上。 租房提取情形 租住本市商品住房，未提供租房发票的，经</description>
+    </item>
+    
+  </channel>
+</rss>
