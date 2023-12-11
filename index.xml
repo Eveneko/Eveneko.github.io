@@ -6,7 +6,16 @@
     <description>Recent content on Neko Nest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 30 Nov 2023 19:58:27 +0800</lastBuildDate><atom:link href="https://eveneko.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Dec 2023 19:28:08 +0800</lastBuildDate><atom:link href="https://eveneko.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>比较是偷走快乐的贼——高德vs华为</title>
+      <link>https://eveneko.com/posts/job/cmp/</link>
+      <pubDate>Mon, 11 Dec 2023 19:28:08 +0800</pubDate>
+      
+      <guid>https://eveneko.com/posts/job/cmp/</guid>
+      <description>万能的群友们，来了一个新的offer，有一点小纠结，请帮忙cc～ 个人背景 本科：南方科技大学，计算机科学与技术 硕士：北京邮电大学，网络空间安全 offer 已经签过三方的offer：阿里巴巴-高德-地图技术工程师-北京-sp 新offer：华为-云核心网产品线-网络安全与隐私保护工程师-上海-1</description>
+    </item>
+    
     <item>
       <title>现代CPU性能分析与优化</title>
       <link>https://eveneko.com/posts/books/%E7%8E%B0%E4%BB%A3cpu%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E4%B8%8E%E4%BC%98%E5%8C%96/</link>
@@ -18,10 +27,10 @@
     
     <item>
       <title>2023秋招小结</title>
-      <link>https://eveneko.com/posts/interview/2023-summary/</link>
+      <link>https://eveneko.com/posts/job/2023-summary/</link>
       <pubDate>Wed, 29 Nov 2023 21:05:58 +0800</pubDate>
       
-      <guid>https://eveneko.com/posts/interview/2023-summary/</guid>
+      <guid>https://eveneko.com/posts/job/2023-summary/</guid>
       <description>背景 本科：南方科技大学，计算机科学与技术 硕士：北京邮电大学，网络空间安全 实习：腾讯，蔚来 统计 投递 47 家 40 家私企 7 家国企/银行及其子公司 实习不转正 1 家 蔚来 offer 9 家 阿里巴巴-高德-地图技术工程师-北京-sp 华为-云核心网产品线-网络安全与隐私保护工程师-上海-14a 腾讯-CSIG-运营开</description>
     </item>
     
@@ -72,10 +81,10 @@
     
     <item>
       <title>2023秋招死亡笔记</title>
-      <link>https://eveneko.com/posts/update/2023-find-job/</link>
+      <link>https://eveneko.com/posts/job/2023-find-job/</link>
       <pubDate>Tue, 01 Aug 2023 03:51:13 +0800</pubDate>
       
-      <guid>https://eveneko.com/posts/update/2023-find-job/</guid>
+      <guid>https://eveneko.com/posts/job/2023-find-job/</guid>
       <description>结局 职位: 地图技术工程师 岗位层级: P5 所属部门: 阿里集团-本地生活集团-高德-APP平台业务中心 工作地点: 北京-北京 2023秋招总结 投递记录 公司 更新日期 状态 工作地点 岗位 蔚来 2023-07-20 实习不转正 北京/上海 自动驾驶系统优化 百度 2023-08-28 二面 北京 C++/PHP/GO研发工程师(J59431) 字节 2023-08-10 流程终</description>
     </item>
     
